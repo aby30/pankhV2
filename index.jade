@@ -1,0 +1,230 @@
+html
+  head
+    title Pankhuri
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700', rel='stylesheet')
+    
+    link(rel='stylesheet', type='text/css', href='styles/index.css')
+    //- link(rel="stylesheet", type="text/css", href="slick/slick-theme.css")
+    script(type='text/javascript', src='//code.jquery.com/jquery-1.11.0.min.js')
+    script(type='text/javascript', src='//code.jquery.com/jquery-migrate-1.2.1.min.js')
+    script(type='text/javascript', src='/js/scripts.js')
+    
+
+  body
+      
+    .home
+      .home__wrap
+        .home__inner
+          
+          .home__bannerWrap
+            //header Inculde
+            .header__main
+              .header__inner
+                span.header__logo
+                  img(src="images/icons/logoWhite.png")
+                span.header__menu
+                  input(type="checkbox" id="triggerMenu", onClick="showMenu();")
+                  label(for="triggerMenu")
+                    //- img(src="images/icons/hamburger.svg")
+                    .bar-wrap
+                      span.icon-bar
+                      span.icon-bar
+                      span.icon-bar
+              
+                  .header__menuMain
+                    .header__menuInner
+                      .header__menuList
+                        .header__menuListItem
+                          a(href="#", onClick="hideMenu();")
+                            |Home
+                        .header__menuListItem
+                          a(href="#", onClick="hideMenu();")
+                            |How it works
+                        .header__menuListItem
+                          a(href="#", onClick="hideMenu();")
+                            |Behind the scene
+                        .header__menuListItem
+                          a(href="#", onClick="hideMenu();")
+                            |Features
+                        .header__menuListItem
+                          a(href="#", onClick="hideMenu();")
+                            |Packages
+                      
+                  //- .header__menuClose
+                  //-   |close
+            .home__bannerInner
+              .home__subMsg
+                |Stressed out with a lot of questions for your 
+                span
+                  |Wedding Day?
+              .home__msg
+                |Where can i buy the best Wedding dress?
+              .home__cta(onClick="showMsgModal();")
+                button(type="button")
+                  |Ask Pankhuri
+              
+              .home__services
+                //- .home__servicesTitle
+                //-   |Ask Pankhuri
+                .home__servicesIcons
+                  span
+                    img(src="/images/icons/menDress.svg")
+                  span
+                    img(src="/images/icons/womenDress.svg")
+                  span
+                    img(src="/images/icons/ring.svg")
+                  span
+                    img(src="/images/icons/deco.svg")
+                  span
+                    img(src="/images/icons/drinks.svg")
+                  span
+                    img(src="/images/icons/makeup.svg")
+                  span
+                    img(src="/images/icons/camera.svg")
+                  span
+                    img(src="/images/icons/videoCam.svg")
+                  span
+                    img(src="/images/icons/voilin.svg")
+                  span
+                    img(src="/images/icons/cake.svg")
+                    
+              .home__cta.mob(onclick="showMsgModal();")
+                button(type="button")
+                  |Ask Pankhuri
+    
+    .footer__main
+      .footer__inner
+        
+        .footer__logo
+          img(src="images/icons/logoWhite.png")
+          .footer__rights
+            |(C) 2018 Pankhuri, All rights reserved
+            
+        .footer__linksWrap
+          .footer__linksColumn
+            .footer__linksColumnTitle
+              |Ideas
+            ul.footer__linksColumnList
+              li
+                a(href="")
+                  |Decor
+              li
+                a(href="")
+                  |Gifts
+              li
+                a(href="")
+                  |Destinations
+              li
+                a(href="")
+                  |Fashions
+              li
+                a(href="")
+                  |Beauty
+                
+          .footer__linksColumn
+            .footer__linksColumnTitle
+              |Quick Links
+            ul.footer__linksColumnList
+              li
+                a(href="")
+                  |Why Social Media?
+              li
+                a(href="")
+                  |About Us
+              li
+                a(href="")
+                  |FAQ
+              li
+                a(href="")
+                  |Contact Us 
+              li
+                a(href="")
+                  |Privacy Policy
+        
+          .footer__linksColumn
+            .footer__linksColumnTitle
+              |Social Media
+            ul.footer__linksColumnList
+              li
+                a(href="")
+                  |Facebook
+              li
+                a(href="")
+                  |Instagram
+              li
+                a(href="")
+                  |Twitter
+              li
+                a(href="")
+                  |LinkedIn
+      
+    #msgModal.modalbox.modalbox--plain.msgModal
+      .modalbox__content
+        .modalbox__contentInner
+          .modalbox__header
+            //- .modalbox__headerTitle
+            //-   |Title
+            //- #closeMsgModal.modalbox__close
+            //-   img(src='../images/icons/close.svg', alt='close')
+          .modalbox__body.msgModal__body
+            .msgModal__close(onclick="closeMsgModal();")
+              img(src="images/icons/error.svg")
+            .msgModal__inner
+            
+              .msgModal__col
+                .msgModal__colContent1#msgModal__colContent1
+                  .msgModal__colTitle
+                    |Let's start talking
+                    div
+                      |Whatsapp me on
+                  .msgModal__compContact
+                    |+91 63640 47530
+                  .msgModal__mode
+                    .msgModal__mode1
+                      input(type='text', placeholder='Enter your number')
+                      .msgModal__modeSend
+                        img(src="images/icons/send.svg")
+                      
+                    .msgModal__mode2(onclick="showMsgBox();")
+                      .msgModal__modeEnvelope
+                        img(src="images/icons/envelope.svg")
+                      .msgModal__mode2Text
+                        |Or message us.
+                
+                .msgModal__colContent2#msgModal__colContent2
+                  .msgModal__input
+                    input(type="email", placeholder="Type in your email")
+                    .msgModal__msgIcon
+                      img(src="images/icons/envelope.svg")
+                  .msgModal__input
+                    textarea(placeholder="Tell me what you need :)")
+                  .msgModal__inputBtn
+                    button(type="submit", onclick="showSuccess();")
+                      |Send
+                
+                .msgModal__colContent3#msgModal__colContent3
+                  .msgModal__sentSuccessTitle
+                    |Awesome!
+                  .msgModal__sentSuccessSubTitle
+                    |We'll get back to you with best suggestions to make your day special
+                    
+              .msgModal__col
+                .msgModal__whatsapp
+                  .msgModal__whatsappIcon
+                    img(src="images/icons/whatsappWOtxt.png")
+                  a(href="#").msgModal__whatsappLink
+                    |wa.me/916364047530
+                .msgModal__whatsappQr
+                  img(src="images/whatsappQr.png")
+                .msgModal__instruction
+                  |Scan QR code 
+                  div
+                    |to start chatting on WhatsApp web
+                  
+                
+          .modalbox__footer
+          

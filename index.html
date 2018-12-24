@@ -1,0 +1,151 @@
+
+<html>
+  <head>
+    <title>Pankhuri</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="styles/index.css"/>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="home">
+      <div class="home__wrap">
+        <div class="home__inner">
+          <div class="home__bannerWrap">
+            <!--header Inculde-->
+            <div class="header__main">
+              <div class="header__inner"><span class="header__logo"><img src="images/icons/logoWhite.png"/></span><span class="header__menu">
+                  <input type="checkbox" id="triggerMenu" onClick="showMenu();"/>
+                  <label for="triggerMenu">
+                    <div class="bar-wrap"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></div>
+                  </label>
+                  <div class="header__menuMain">
+                    <div class="header__menuInner">
+                      <div class="header__menuList">
+                        <div class="header__menuListItem"><a href="#" onClick="hideMenu();">Home</a></div>
+                        <div class="header__menuListItem"><a href="#" onClick="hideMenu();">How it works</a></div>
+                        <div class="header__menuListItem"><a href="#" onClick="hideMenu();">Behind the scene</a></div>
+                        <div class="header__menuListItem"><a href="#" onClick="hideMenu();">Features</a></div>
+                        <div class="header__menuListItem"><a href="#" onClick="hideMenu();">Packages</a></div>
+                      </div>
+                    </div>
+                  </div></span></div>
+            </div>
+            <div class="home__bannerInner">
+              <div class="home__subMsg">Stressed out with a lot of questions for your <span>Wedding Day?</span></div>
+              <div class="home__msg">Where can i buy the best Wedding dress?</div>
+              <div class="home__cta" onClick="showMsgModal();">
+                <button type="button">Ask Pankhuri</button>
+              </div>
+              <div class="home__services">
+                <div class="home__servicesIcons"><span><img src="/images/icons/menDress.svg"/></span><span><img src="/images/icons/womenDress.svg"/></span><span><img src="/images/icons/ring.svg"/></span><span><img src="/images/icons/deco.svg"/></span><span><img src="/images/icons/drinks.svg"/></span><span><img src="/images/icons/makeup.svg"/></span><span><img src="/images/icons/camera.svg"/></span><span><img src="/images/icons/videoCam.svg"/></span><span><img src="/images/icons/voilin.svg"/></span><span><img src="/images/icons/cake.svg"/></span></div>
+              </div>
+              <div class="home__cta mob" onclick="showMsgModal();">
+                <button type="button">Ask Pankhuri</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__main">
+      <div class="footer__inner">
+        <div class="footer__logo"><img src="images/icons/logoWhite.png"/>
+          <div class="footer__rights">(C) 2018 Pankhuri, All rights reserved</div>
+        </div>
+        <div class="footer__linksWrap">
+          <div class="footer__linksColumn">
+            <div class="footer__linksColumnTitle">Ideas</div>
+            <ul class="footer__linksColumnList">
+              <li><a href="">Decor</a></li>
+              <li><a href="">Gifts</a></li>
+              <li><a href="">Destinations</a></li>
+              <li><a href="">Fashions</a></li>
+              <li><a href="">Beauty</a></li>
+            </ul>
+          </div>
+          <div class="footer__linksColumn">
+            <div class="footer__linksColumnTitle">Quick Links</div>
+            <ul class="footer__linksColumnList">
+              <li><a href="">Why Social Media?</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">FAQ</a></li>
+              <li><a href="">Contact Us </a></li>
+              <li><a href="">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer__linksColumn">
+            <div class="footer__linksColumnTitle">Social Media</div>
+            <ul class="footer__linksColumnList">
+              <li><a href="">Facebook</a></li>
+              <li><a href="">Instagram</a></li>
+              <li><a href="">Twitter</a></li>
+              <li><a href="">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modalbox modalbox--plain msgModal" id="msgModal">
+      <div class="modalbox__content">
+        <div class="modalbox__contentInner">
+          <div class="modalbox__header"></div>
+          <div class="modalbox__body msgModal__body">
+            <div class="msgModal__close" onclick="closeMsgModal();"><img src="images/icons/error.svg"/></div>
+            <div class="msgModal__inner">
+              <div class="msgModal__col">
+                <div class="msgModal__colContent1" id="msgModal__colContent1">
+                  <div class="msgModal__colTitle">Let's start talking
+                    <div>Whatsapp me on</div>
+                  </div>
+                  <div class="msgModal__compContact">+91 63640 47530</div>
+                  <div class="msgModal__mode">
+                    <div class="msgModal__mode1">
+                      <input type="text" placeholder="Enter your number"/>
+                      <div class="msgModal__modeSend"><img src="images/icons/send.svg"/></div>
+                    </div>
+                    <div class="msgModal__mode2" onclick="showMsgBox();">
+                      <div class="msgModal__modeEnvelope"><img src="images/icons/envelope.svg"/></div>
+                      <div class="msgModal__mode2Text">Or message us.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="msgModal__colContent2" id="msgModal__colContent2">
+                  <div class="msgModal__input">
+                    <input type="email" placeholder="Type in your email"/>
+                    <div class="msgModal__msgIcon"><img src="images/icons/envelope.svg"/></div>
+                  </div>
+                  <div class="msgModal__input">
+                    <textarea placeholder="Tell me what you need :)"></textarea>
+                  </div>
+                  <div class="msgModal__inputBtn">
+                    <button type="submit" onclick="showSuccess();">Send</button>
+                  </div>
+                </div>
+                <div class="msgModal__colContent3" id="msgModal__colContent3">
+                  <div class="msgModal__sentSuccessTitle">Awesome!</div>
+                  <div class="msgModal__sentSuccessSubTitle">We'll get back to you with best suggestions to make your day special</div>
+                </div>
+              </div>
+              <div class="msgModal__col">
+                <div class="msgModal__whatsapp">
+                  <div class="msgModal__whatsappIcon"><img src="images/icons/whatsappWOtxt.png"/></div><a class="msgModal__whatsappLink" href="#">wa.me/916364047530</a>
+                </div>
+                <div class="msgModal__whatsappQr"><img src="images/whatsappQr.png"/></div>
+                <div class="msgModal__instruction">Scan QR code 
+                  <div>to start chatting on WhatsApp web</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modalbox__footer"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
