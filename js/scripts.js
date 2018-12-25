@@ -5,16 +5,24 @@ function hideMenu() {
 function showMsgModal() {
   var modalId = document.getElementById('msgModal');
   modalId.style.display = "block";
+  setTimeout(function(){
+    $(".msgModal__body").addClass("inView");
+  }, 100);
+  $("body").addClass("noScroll");
 };
 
 function closeMsgModal() {
   var modalId = document.getElementById('msgModal');
   modalId.style.display = "none";
+  setTimeout(function(){
+    $(".msgModal__body").removeClass("inView");
+  }, 100);
   $("#msgModal__colContent2").removeClass("inView");
   $("#msgModal__colContent3").removeClass("inView");
   document.getElementById('msgModal__colContent2').style.display = "none";
   document.getElementById('msgModal__colContent3').style.display = "none";
   document.getElementById('msgModal__colContent1').style.display = "block";
+  $("body").removeClass("noScroll");
 };
 
 function showMsgBox() {

@@ -350,7 +350,15 @@ body {
   width: 60%;
   margin: 0 auto;
   border-radius: 4px;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-transform: translateY(1em) perspective(600px) rotateX(-7deg);
+  transform: translateY(1em) perspective(600px) rotateX(-7deg);
+  -webkit-transition: all 0.3s cubic-bezier(0.51, 0.92, 0.24, 2);
+  -o-transition: all 0.3s cubic-bezier(0.51, 0.92, 0.24, 2);
+  transition: all 0.3s cubic-bezier(0.51, 0.92, 0.24, 2); }
+  .msgModal__body.inView {
+    -webkit-transform: translateY(0) perspective(600px) rotateX(0);
+    transform: translateY(0) perspective(600px) rotateX(0); }
   @media (max-width: 768px) {
     .msgModal__body {
       width: 80%; } }
