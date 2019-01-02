@@ -140,7 +140,7 @@ body {
       width: 100%;
       z-index: 100;
       @media(max-width: 768px) {
-        top: 55px;
+        top: 54px;
       }
   }
   &__menuInner {
@@ -317,6 +317,32 @@ body {
     font-size: 4.8em;
     line-height: 1.2;
     margin: 0 0 20px;
+    min-height: 176px;
+    > span {
+      position: relative;
+      // &:after {
+      //   content: ' ';
+      //   position: absolute;
+      //   right: 0px;
+      //   top:
+      // }
+    }
+    .cursor {
+      position: relative;
+      display: inline-block;
+      bottom: -9px;
+      /* font-size: 85px; */
+      /* line-height: 1; */
+      /* font-family: 'Proxima-Nova-Light'; */
+      margin: 0 0 0 7px;
+      width: 2px;
+      height: 59px;
+      background-color: #ffffff;
+      @media(max-width: 768px) {
+        bottom: -3px;
+        height: 27px;
+      }
+    }
   }
   &__cta {
     display: block;
@@ -602,15 +628,19 @@ body {
   }
   &__colContent2 {
     transform: translate(-30px, 0);
-    transition: all 0.05s linear;
+    transition: all .4s cubic-bezier(.25,.8,.25,1);
+    opacity: 0.5;
     &.inView {
+      opacity: 1;
       transform: translate(0px, 0);
     }
   }
   &__colContent3 {
     transform: scale(0.6);
-    transition: all 0.05s linear;
+    opacity: 0.5;
+    transition: all .4s cubic-bezier(.25,.8,.25,1);
     &.inView {
+      opacity: 1;
       transform: scale(1);
     }
   }
@@ -695,6 +725,65 @@ body {
     to {top:0; opacity:1}
 }
 
+// Blinking Cursor Effect START
+
+.blinkingCursor {
+  font-weight: 100;
+  font-size: 30px;
+  // color: #2E3D48;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #ffffff;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #ffffff;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #ffffff;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #ffffff;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #ffffff;
+  }
+}
+
+// Blinking Cursor Effect END
 
 // slideToRight Animation
 // @-webkit-keyframes slideToRight {

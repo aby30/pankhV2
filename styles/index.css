@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Proxima-Nova-Regular';
   src: url("../fonts/ProximaNova-Regular.otf");
@@ -127,7 +128,7 @@ body {
   z-index: 100; }
   @media (max-width: 768px) {
     .header__menuMain {
-      top: 55px; } }
+      top: 54px; } }
 
 .header__menuInner {
   display: table;
@@ -281,7 +282,25 @@ body {
 .home__msg {
   font-size: 4.8em;
   line-height: 1.2;
-  margin: 0 0 20px; }
+  margin: 0 0 20px;
+  min-height: 176px; }
+  .home__msg > span {
+    position: relative; }
+  .home__msg .cursor {
+    position: relative;
+    display: inline-block;
+    bottom: -9px;
+    /* font-size: 85px; */
+    /* line-height: 1; */
+    /* font-family: 'Proxima-Nova-Light'; */
+    margin: 0 0 0 7px;
+    width: 2px;
+    height: 59px;
+    background-color: #ffffff; }
+    @media (max-width: 768px) {
+      .home__msg .cursor {
+        bottom: -3px;
+        height: 27px; } }
 
 .home__cta {
   display: block; }
@@ -548,10 +567,12 @@ body {
   -webkit-transform: translate(-30px, 0);
   -ms-transform: translate(-30px, 0);
   transform: translate(-30px, 0);
-  -webkit-transition: all 0.05s linear;
-  -o-transition: all 0.05s linear;
-  transition: all 0.05s linear; }
+  -webkit-transition: all 0.4s cubic-bezier 0.25, 0.8, 0.25, 1;
+  -o-transition: all 0.4s cubic-bezier 0.25, 0.8, 0.25, 1;
+  transition: all 0.4s cubic-bezier 0.25, 0.8, 0.25, 1;
+  opacity: 0.5; }
   .msgModal__colContent2.inView {
+    opacity: 1;
     -webkit-transform: translate(0px, 0);
     -ms-transform: translate(0px, 0);
     transform: translate(0px, 0); }
@@ -560,10 +581,12 @@ body {
   -webkit-transform: scale(0.6);
   -ms-transform: scale(0.6);
   transform: scale(0.6);
-  -webkit-transition: all 0.05s linear;
-  -o-transition: all 0.05s linear;
-  transition: all 0.05s linear; }
+  opacity: 0.5;
+  -webkit-transition: all 0.4s cubic-bezier 0.25, 0.8, 0.25, 1;
+  -o-transition: all 0.4s cubic-bezier 0.25, 0.8, 0.25, 1;
+  transition: all 0.4s cubic-bezier 0.25, 0.8, 0.25, 1; }
   .msgModal__colContent3.inView {
+    opacity: 1;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1); }
@@ -629,3 +652,42 @@ body {
   to {
     top: 0;
     opacity: 1; } }
+
+.blinkingCursor {
+  font-weight: 100;
+  font-size: 30px;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite; }
+
+@keyframes "blink" {
+  from, to {
+    background-color: transparent; }
+  50% {
+    background-color: #ffffff; } }
+
+@-moz-keyframes blink {
+  from, to {
+    background-color: transparent; }
+  50% {
+    background-color: #ffffff; } }
+
+@-webkit-keyframes "blink" {
+  from, to {
+    background-color: transparent; }
+  50% {
+    background-color: #ffffff; } }
+
+@-ms-keyframes "blink" {
+  from, to {
+    background-color: transparent; }
+  50% {
+    background-color: #ffffff; } }
+
+@-o-keyframes "blink" {
+  from, to {
+    background-color: transparent; }
+  50% {
+    background-color: #ffffff; } }

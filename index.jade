@@ -41,17 +41,14 @@ html
                           a(href="#", onClick="hideMenu();")
                             |Home
                         .header__menuListItem
-                          a(href="#", onClick="hideMenu();")
-                            |How it works
+                          a(href="https://www.facebook.com/pankhuri.weddings/", target="_blank" onClick="hideMenu();")
+                            |Facebook
                         .header__menuListItem
-                          a(href="#", onClick="hideMenu();")
-                            |Behind the scene
-                        .header__menuListItem
-                          a(href="#", onClick="hideMenu();")
-                            |Features
-                        .header__menuListItem
-                          a(href="#", onClick="hideMenu();")
-                            |Packages
+                          a(href="https://www.instagram.com/pankhuri.weddings/", target="_blank" onClick="hideMenu();")
+                            |Instagram
+                        //- .header__menuListItem
+                        //-   a(href="#", onClick="hideMenu();")
+                        //-     |Ask Pankhuri
                       
                   //- .header__menuClose
                   //-   |close
@@ -61,9 +58,11 @@ html
                 span
                   |Wedding Day?
               .home__msg
-                |Where can i buy the best Wedding dress?
-              .home__cta(onClick="showMsgModal();")
-                button(type="button")
+                span#questions
+                  |Where can i buy the best Wedding dress?
+                span.cursor.blinkingCursor
+              .home__cta
+                button(type="button", onClick="showMsgModal();")
                   |Ask Pankhuri
               
               .home__services
@@ -106,7 +105,7 @@ html
         .footer__linksWrap
           .footer__linksColumn
             .footer__linksColumnTitle
-              |Ideas
+              |We can help with
             ul.footer__linksColumnList
               li
                 a(href="")
@@ -149,17 +148,17 @@ html
               |Social Media
             ul.footer__linksColumnList
               li
-                a(href="")
+                a(href="https://www.facebook.com/pankhuri.weddings/", target="_blank")
                   |Facebook
               li
-                a(href="")
+                a(href="https://www.instagram.com/pankhuri.weddings/", target="_blank")
                   |Instagram
-              li
-                a(href="")
-                  |Twitter
-              li
-                a(href="")
-                  |LinkedIn
+              //- li
+              //-   a(href="")
+              //-     |Twitter
+              //- li
+              //-   a(href="")
+              //-     |LinkedIn
       
     #msgModal.modalbox.modalbox--plain.msgModal
       .modalbox__content
@@ -215,7 +214,7 @@ html
                 .msgModal__whatsapp
                   .msgModal__whatsappIcon
                     img(src="images/icons/whatsappWOtxt.png")
-                  a(href="#").msgModal__whatsappLink
+                  a(href="https://wa.me/916364047530", target="_blank").msgModal__whatsappLink
                     |wa.me/916364047530
                 .msgModal__whatsappQr
                   img(src="images/whatsappQr.png")
