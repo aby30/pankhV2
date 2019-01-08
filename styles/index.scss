@@ -191,9 +191,11 @@ body {
     padding: 5% 2% 5% 10%;
     @media(max-width: 768px) {
       display: block;
+      padding: 5% 7% 5%;
+      text-align: center;
     }
   }
-  &__logo, &__linksWrap {
+  &__logo, &__aboutWrap {
     display: table-cell;
     @media(max-width: 768px) {
       display: block;
@@ -215,11 +217,20 @@ body {
   &__rights {
     font-family: 'Proxima-Nova-Light';
     font-size: 12px;
+    margin: 0 0 50px;
   }
-  &__linksWrap {
-    width: 54%;
+  &__aboutWrap {
+    width: 64%;
     @media(max-width: 768px) {
       width: 100%;
+    }
+  }
+  &__aboutTitle {
+    font-size: 21px;
+    margin: 0 0 15px;
+    + div {
+      font-family: 'Proxima-Nova-Light';
+      line-height: 1.8;
     }
   }
   &__linksColumnTitle {
@@ -238,7 +249,7 @@ body {
   }
   &__linksColumnList {
     list-style-type: none;
-    padding: 20px 0 0;
+    padding: 12px 0 0;
     li {
       margin: 0 0 10px;
       font-size: 14px;
@@ -270,7 +281,7 @@ body {
     height: 100%;
     width: 100%;
     font-size: 14px;
-    background-color: rgba(0,0,0,0.4);
+    // background-color: rgba(0,0,0,0.4);
     @media(max-width: 768px) {
       display: block;
       height: auto;
@@ -284,7 +295,7 @@ body {
     width: 100%;
     height: 100%;
     // background-color: rgba(0,0,0,0.5);
-    background: linear-gradient(42.03deg, rgba(122, 12, 233, 0.55) 0%, rgba(254, 85, 101, 0.55) 100%);
+    // background: linear-gradient(42.03deg, rgba(122, 12, 233, 0.55) 0%, rgba(254, 85, 101, 0.55) 100%);
     // background: linear-gradient(42.03deg, rgba(122,12,233,1) 0%, rgba(254,85,101,1) 100%);
     color: #ffffff;
     @media(max-width: 768px) {
