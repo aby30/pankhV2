@@ -202,7 +202,8 @@ body {
 
 .footer__aboutTitle {
   font-size: 21px;
-  margin: 0 0 15px; }
+  margin: 0 0 15px;
+  font-family: 'Proxima-Nova-Semi-Bold'; }
   .footer__aboutTitle + div {
     font-family: 'Proxima-Nova-Light';
     line-height: 1.8; }
